@@ -42,8 +42,7 @@ public class RecreationPoiAdapter extends RecyclerView.Adapter<RecreationPoiAdap
 
     @Override
     public RecreationPoiHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        /*PoiListItemBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
-                R.layout.poi_list_item, parent, false);*/
+
         PoiListItemRecreationBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
                 R.layout.poi_list_item_recreation, parent, false);
 

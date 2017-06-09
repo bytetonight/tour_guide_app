@@ -41,8 +41,7 @@ public class SportsPoiAdapter extends RecyclerView.Adapter<SportsPoiAdapter.Spor
 
     @Override
     public SportsPoiHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        /*PoiListItemBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
-                R.layout.poi_list_item, parent, false);*/
+
         PoiListItemSportsBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
                 R.layout.poi_list_item_sports, parent, false);
 

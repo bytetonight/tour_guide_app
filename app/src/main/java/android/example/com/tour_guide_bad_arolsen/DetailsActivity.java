@@ -50,7 +50,7 @@ public class DetailsActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, R.string.action_coming_soon, Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });

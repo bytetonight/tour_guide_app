@@ -2,7 +2,6 @@ package android.example.com.tour_guide_bad_arolsen.poi.adapters;
 
 import android.databinding.DataBindingUtil;
 import android.example.com.tour_guide_bad_arolsen.R;
-import android.example.com.tour_guide_bad_arolsen.databinding.PoiListItemBinding;
 import android.example.com.tour_guide_bad_arolsen.databinding.PoiListItemGastronomyBinding;
 import android.example.com.tour_guide_bad_arolsen.poi.GastronomyPlace;
 import android.example.com.tour_guide_bad_arolsen.poi.handlers.PoiHandlers;
@@ -17,13 +16,16 @@ import java.util.List;
  * Created by ByteTonight on 02.06.2017.
  *
  *
- * TODO : READ https://www.bignerdranch.com/blog/descent-into-databinding/
+ *  https://www.bignerdranch.com/blog/descent-into-databinding/
  *
  * https://stackoverflow.com/questions/38818199/android-databindingutils-how-to-use-a-single-adapter-for-the-whole-project
  *
  * https://stackoverflow.com/questions/39364813/android-databinding-mvvm-using-same-layout-files-for-different-conditions-us
  *
  * https://stackoverflow.com/questions/41718377/use-tab-layout-in-mvvm-architecture-with-the-data-binding-library
+ *
+ * Almost all the information gathered above either consists of code fragments only understandable by people in the context
+ * or methods that were designed for a single list of items and therefore hardly of use
  */
 
 
@@ -41,8 +43,7 @@ public class GastronomyPoiAdapter extends RecyclerView.Adapter<GastronomyPoiAdap
 
     @Override
     public GastronomyPoiHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        /*PoiListItemBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
-                R.layout.poi_list_item, parent, false);*/
+
         PoiListItemGastronomyBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
                 R.layout.poi_list_item_gastronomy, parent, false);
 

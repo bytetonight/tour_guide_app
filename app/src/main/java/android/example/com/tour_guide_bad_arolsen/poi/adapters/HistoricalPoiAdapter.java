@@ -2,7 +2,6 @@ package android.example.com.tour_guide_bad_arolsen.poi.adapters;
 
 import android.databinding.DataBindingUtil;
 import android.example.com.tour_guide_bad_arolsen.R;
-import android.example.com.tour_guide_bad_arolsen.databinding.PoiListItemBinding;
 import android.example.com.tour_guide_bad_arolsen.databinding.PoiListItemHistoricalBinding;
 import android.example.com.tour_guide_bad_arolsen.poi.HistoricalPlace;
 import android.example.com.tour_guide_bad_arolsen.poi.handlers.PoiHandlers;
@@ -31,13 +30,17 @@ public class HistoricalPoiAdapter extends RecyclerView.Adapter<HistoricalPoiAdap
 
     public HistoricalPoiAdapter(List<HistoricalPlace> items) {
         super();
-        this.items = items; //This is being overwritten by the list from GastronomyPoiAdapter and I don't know why. It's not static !!
+        this.items = items;
+        /*This was being overwritten by the list from GastronomyPoiAdapter and I don't know why.
+          It's not static !! That's what you get for playing around with very poorly documented
+          features like DataBinding. A GOOD documentation includes WORKING EXAMPLES and not 3-liner-
+          code-fragments scattered around.
+          */
     }
 
     @Override
     public SimplePoiHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        /*PoiListItemBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
-                R.layout.poi_list_item, parent, false);*/
+
         PoiListItemHistoricalBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
                 R.layout.poi_list_item_historical, parent, false);
 

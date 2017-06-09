@@ -111,7 +111,7 @@
     <string name="btn_share_text">Share</string>
     <string name="btn_learn_more_text">Learn more</string>
     <string name="title_activity_details">Details</string>
-
+    <string name="action_coming_soon">The Action is coming soon</string>
 
 
 </resources>
