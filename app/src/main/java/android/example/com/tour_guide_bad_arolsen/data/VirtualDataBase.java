@@ -20,27 +20,10 @@ import java.util.List;
 public class VirtualDataBase {
 
     public enum Poi {
-        Historical, Gastronomy, Recreational, Sports, Entertainment
+        Historical, Gastronomy, Recreational, Sports
     }
 
     private static Poi poiType;
-
-    private static List<PointOfInterest> places = new ArrayList<>();
-
-   /* public static List<PointOfInterest> getPlacesByType(Context c, Poi t)
-    {
-        List<PointOfInterest> poiList = null;
-        poiType = t;
-        switch (poiType) {
-            case Historical:
-                poiList = getHistoricalPlaces(c);
-                break;
-            case Gastronomy:
-                poiList = getGastronomyPlaces(c);
-                break;
-        }
-        return poiList;
-    }*/
 
     public static List<HistoricalPlace> getHistoricalPlaces(Context c)
     {
