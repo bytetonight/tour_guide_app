@@ -1,10 +1,11 @@
 package android.example.com.tour_guide_bad_arolsen;
 
-import android.example.com.tour_guide_bad_arolsen.data.VirtualDataBase;
-import android.example.com.tour_guide_bad_arolsen.fragments.GastronomyFragment;
-import android.example.com.tour_guide_bad_arolsen.fragments.HistoricalFragment;
-import android.example.com.tour_guide_bad_arolsen.fragments.RecreationFragment;
-import android.example.com.tour_guide_bad_arolsen.fragments.SportsFragment;
+
+import android.example.com.tour_guide_bad_arolsen.data.VirtualDataBase2;
+
+import android.example.com.tour_guide_bad_arolsen.fragments.GenericFragment;
+
+import android.example.com.tour_guide_bad_arolsen.poi.interfaces.PointOfInterest;
 import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -25,6 +26,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.TextView;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -90,14 +93,19 @@ public class MainActivity extends AppCompatActivity {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return HistoricalFragment.newInstance(VirtualDataBase.Poi.Historical);
+                    return GenericFragment.newInstance(
+                            new ArrayList<>(VirtualDataBase2.getHistoricalPlaces(MainActivity.this)));
                 case 1:
-                    return GastronomyFragment.newInstance(VirtualDataBase.Poi.Gastronomy);
+                    return GenericFragment.newInstance(
+                            new ArrayList<>(VirtualDataBase2.getGastronomyPlaces(MainActivity.this)));
                 case 2:
-                    return RecreationFragment.newInstance(VirtualDataBase.Poi.Recreational);
+                    return GenericFragment.newInstance(
+                            new ArrayList<>(VirtualDataBase2.getRecreationPlaces(MainActivity.this)));
                 case 3:
-                    return SportsFragment.newInstance(VirtualDataBase.Poi.Sports);
-                default: return HistoricalFragment.newInstance(VirtualDataBase.Poi.Historical);
+                    return GenericFragment.newInstance(
+                            new ArrayList<>(VirtualDataBase2.getSportsPlaces(MainActivity.this)));
+                default: return GenericFragment.newInstance(
+                        new ArrayList<>(VirtualDataBase2.getHistoricalPlaces(MainActivity.this)));
             }
 
         }

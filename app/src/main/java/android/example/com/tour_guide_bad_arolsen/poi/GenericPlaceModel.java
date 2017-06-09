@@ -17,19 +17,19 @@ import com.bumptech.glide.request.target.SimpleTarget;
  * Created by ByteTonight on 02.06.2017.
  */
 
-public class RecreationPlace implements PointOfInterest, Parcelable {
+public class GenericPlaceModel implements PointOfInterest, Parcelable {
 
-    public static final Creator<RecreationPlace> CREATOR =
-            new Creator<RecreationPlace>() {
+    public static final Creator<GenericPlaceModel> CREATOR =
+            new Creator<GenericPlaceModel>() {
 
                 @Override
-                public RecreationPlace createFromParcel(Parcel source) {
-                    return new RecreationPlace(source);
+                public GenericPlaceModel createFromParcel(Parcel source) {
+                    return new GenericPlaceModel(source);
                 }
 
                 @Override
-                public RecreationPlace[] newArray(int size) {
-                    return new RecreationPlace[size];
+                public GenericPlaceModel[] newArray(int size) {
+                    return new GenericPlaceModel[size];
                 }
             };
 
@@ -43,7 +43,7 @@ public class RecreationPlace implements PointOfInterest, Parcelable {
     private int previewImgResourceId = NO_RESOURCE;
 
     //Unwrap the parcel and populate instance
-    public RecreationPlace(Parcel parcel) {
+    public GenericPlaceModel(Parcel parcel) {
         name = parcel.readString();
         teaserText = parcel.readString();
         detailText = parcel.readString();
@@ -51,7 +51,7 @@ public class RecreationPlace implements PointOfInterest, Parcelable {
         //Note to myself : See MinimalQuizApp for more on reading parcel data
     }
 
-    public RecreationPlace(String name, String teaserText, String detailText, int previewImgResourceId) {
+    public GenericPlaceModel(String name, String teaserText, String detailText, int previewImgResourceId) {
 
         this.name = name;
         this.teaserText = teaserText;
@@ -59,8 +59,8 @@ public class RecreationPlace implements PointOfInterest, Parcelable {
         this.previewImgResourceId = previewImgResourceId;
     }
 
-    public RecreationPlace(String name, String teaserText, String address, String website,
-                           String mapLoc, int previewImgResourceId) {
+    public GenericPlaceModel(String name, String teaserText, String address, String website,
+                             String mapLoc, int previewImgResourceId) {
 
         this.name = name;
         this.teaserText = teaserText;

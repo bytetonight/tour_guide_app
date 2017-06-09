@@ -1,9 +1,10 @@
 package android.example.com.tour_guide_bad_arolsen.fragments;
 
-import android.content.Context;
-import android.example.com.tour_guide_bad_arolsen.data.VirtualDataBase;
-import android.example.com.tour_guide_bad_arolsen.poi.adapters.HistoricalPoiAdapter;
-import android.net.Uri;
+import android.example.com.tour_guide_bad_arolsen.R;
+
+import android.example.com.tour_guide_bad_arolsen.data.VirtualDataBase2;
+import android.example.com.tour_guide_bad_arolsen.poi.adapters.GenericPoiAdapter;
+import android.example.com.tour_guide_bad_arolsen.poi.interfaces.PointOfInterest;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,25 +14,26 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import android.example.com.tour_guide_bad_arolsen.R;
+import java.util.ArrayList;
+import java.util.List;
 
 
-public class HistoricalFragment extends Fragment {
+public class GenericFragment extends Fragment {
 
     private static final String ARG_POI_TYPE = "poi_type";
-    private VirtualDataBase.Poi poiType;
+    private List<PointOfInterest> items;
 
 
 
-    public HistoricalFragment() {
+    public GenericFragment() {
         // Required empty public constructor
     }
 
 
-    public static HistoricalFragment newInstance(VirtualDataBase.Poi poiType) {
-        HistoricalFragment fragment = new HistoricalFragment();
+    public static GenericFragment newInstance(ArrayList<PointOfInterest> items) {
+        GenericFragment fragment = new GenericFragment();
         Bundle args = new Bundle();
-        args.putSerializable(ARG_POI_TYPE, poiType);
+        args.putParcelableArrayList("items", items);
         fragment.setArguments(args);
         return fragment;
     }
@@ -40,7 +42,7 @@ public class HistoricalFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            poiType = (VirtualDataBase.Poi) getArguments().getSerializable(ARG_POI_TYPE);
+            items = getArguments().getParcelableArrayList("items");
         }
     }
 
@@ -51,8 +53,8 @@ public class HistoricalFragment extends Fragment {
         //I could load a different Layout each time depending on what poiType is set to
         View rootView = inflater.inflate(R.layout.fragment_recyclerview_list, container, false);
 
-        //HistoricalPoiAdapter adapter = new HistoricalPoiAdapter(VirtualDataBase.getHistoricalPlaces(getContext()));
-        HistoricalPoiAdapter adapter = new HistoricalPoiAdapter(VirtualDataBase.getHistoricalPlaces(getContext()));
+
+        GenericPoiAdapter adapter = new GenericPoiAdapter(items);
 
 
         final RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.my_recycler_view);
@@ -60,7 +62,7 @@ public class HistoricalFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
 
         recyclerView.setAdapter(adapter);
-        Log.v("HistoricalFragment", adapter.getClass().toString());
+
 
         return rootView;
     }
