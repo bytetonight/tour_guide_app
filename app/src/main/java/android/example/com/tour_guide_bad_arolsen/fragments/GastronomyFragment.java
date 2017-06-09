@@ -48,7 +48,7 @@ public class GastronomyFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         //I could load a different Layout each time depending on what poiType is set to
-        View rootView = inflater.inflate(R.layout.fragment_gastronomy_list, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_recyclerview_list, container, false);
 
         GastronomyPoiAdapter adapter = new GastronomyPoiAdapter(VirtualDataBase.getGastronomyPlaces(getContext()));
 
