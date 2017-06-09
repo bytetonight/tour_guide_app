@@ -1,0 +1,120 @@
+<resources>
+    <string name="app_name">Tour Guide Bad Arolsen</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="section_title_1">Historical</string>
+    <string name="section_title_2">Gastronomy</string>
+    <string name="section_title_3">Recreation</string>
+    <string name="section_title_4">Sports</string>
+    <string name="section_title_5">Entertainment</string>
+
+    <string name="historical_place_name_1">Chateau Arolsen</string>
+    <string name="historical_place_teaser_1">
+        "The baroque styled Chateau built in 1728 as the home "
+        "of the former ruling family of Waldeck and Pyrmont is now a museum still inhabited by "
+        "Wittekind, Prince of Waldeck and Pyrmont."
+    </string>
+    <string name="historical_place_name_2">Protestant Church</string>
+    <string name="historical_place_teaser_2">
+        "The Church was built in a simplistic baroque style "
+        "from the years 1735 to 1787 and the interior contains a Rokoko stucco styled ceiling"
+    </string>
+    <string name="historical_place_name_3">Palais Canstein</string>
+    <string name="historical_place_teaser_3">
+        "The Mansion was built in 1740 for Major Rabe von Canstein and is considered a very good "
+        "example of baroque architecture. In 1818 the house was owned by the city and used by the "
+        "administration council."
+    </string>
+
+    <string name="gastronomy_place_name_1">Café Prinzess Emma</string>
+    <string name="gastronomy_place_teaser_1">
+        "A small but charming baroque styled Café dedicated to Princess Emma, born in "
+        "Chateau Arolsen and who later became the Queen of the Netherlands. The Café serves various "
+        "beverages and cakes and breakfast in the morning hours."
+    </string>
+    <string name="gastronomy_place_name_2">O\'Mythos</string>
+    <string name="gastronomy_place_teaser_2">
+        "A restaurant serving Greek foods "
+    </string>
+    <string name="gastronomy_place_name_3">Pizzeria Vecchia Roma</string>
+    <string name="gastronomy_place_teaser_3">
+        "A restaurant serving Italian foods "
+    </string>
+    <string name="gastronomy_place_name_4">Avalon Bar</string>
+    <string name="gastronomy_place_teaser_4">
+        "A Bar with Lounge &amp; Garden serving gourmet burgers and various liquor specialties "
+    </string>
+
+
+    <string name="recreation_place_name_1">Welcome Hotel Bad Arolsen</string>
+    <string name="recreation_place_teaser_1">
+        "Enjoy a complete feeling of wellbeing and relaxation is guaranteed in our luxurious "
+        "Welcome Spa (2000 m²). In addition to offering a range of massages, beauty treatments and "
+        "aroma therapy baths the spa also has a pool with a whirlpool, a large sauna centre with a "
+        "Hammam, a salt crystal sauna, a panorama sauna, a bio sauna, wading pools, adventure "
+        showers, a small fitness area and our gourmet Vital Bistrorante. "
+    </string>
+
+    <string name="recreation_place_name_2">Arobella Bad Arolsen</string>
+    <string name="recreation_place_teaser_2">
+        "Egal ob aktive Bewegung bei unseren Aqua-Kursen, Entspannung pur bei einer wohltuenden "
+        "Massage oder eine dosierte Portion Sonne unter einem der Solarien. Achten Sie auf unsere "
+        "Event-Ankündigungen! Die beliebten Beauty-Tage in der Saunalandschaft verwöhnen Sie noch "
+        "mehr."
+   </string>
+
+    <string name="sports_place_name_1">Golf Club Bad Arolsen</string>
+    <string name="sports_place_teaser_1">
+        "Oberhalb des Twistesees, eingebettet in die sanfte Hügellandschaft des Waldecker Landes "
+        "und umgeben von der herrlichen Waldlandschaft Bad Arolsen, liegt unsere 9- Loch Golfanlage "
+        "mit einem großzügig angelegten und für die Region einmaligen Trainingsareal."
+   </string>
+
+    <string name="sports_place_name_2">Waterski Bad Arolsen</string>
+    <string name="sports_place_teaser_2">
+        "Die lautlose und umweltfreundliche Seilbahn zieht Sie für wenig Geld über den idyllischen "
+        "Twistesee, für Anfänger mit 29 km/h bis 58 km/h für Könner. Sie brauchen nichts als Ihre "
+        "Badehose. Wasserski und Schwimmweste werden kostenlos gestellt."
+   </string>
+
+
+    <!-- This is only a demo so I'm only adding one large Text to be used in Details Activity-->
+    <string name="place_detail">
+        "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor "
+        "invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et "
+        "accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata "
+        "sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing "
+        "elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed "
+        "diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.\n\n Stet clita kasd"
+        "gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit "
+        "amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et "
+        "dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores "
+        "et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit "
+        "amet.\n\n"
+
+        "Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, "
+        "vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio "
+        "dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla "
+        "facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh "
+        "euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.\n\n"
+
+        "Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis "
+        "nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in "
+        "vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at "
+        "vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit "
+        "augue duis dolore te feugait nulla facilisi.\n\n"
+
+        "Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod "
+        "mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing "
+        "elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat "
+        "volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit "
+        "lobortis nisl ut aliquip ex ea commodo consequat."
+    </string>
+    <string name="btn_share_text">Share</string>
+    <string name="btn_learn_more_text">Learn more</string>
+    <string name="title_activity_details">Details</string>
+
+
+
+</resources>
