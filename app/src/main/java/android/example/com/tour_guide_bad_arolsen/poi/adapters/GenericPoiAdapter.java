@@ -9,9 +9,7 @@ import android.example.com.tour_guide_bad_arolsen.poi.handlers.PoiHandlers;
 import android.example.com.tour_guide_bad_arolsen.poi.interfaces.PointOfInterest;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
-
 import java.util.List;
 
 /**
@@ -32,7 +30,6 @@ public class GenericPoiAdapter extends RecyclerView.Adapter<GenericPoiAdapter.Vi
 
 
     public GenericPoiAdapter(List<PointOfInterest> items) {
-        super();
         this.items = items;
       }
 
@@ -63,6 +60,11 @@ public class GenericPoiAdapter extends RecyclerView.Adapter<GenericPoiAdapter.Vi
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ViewDataBinding binding;
 
+        /**
+         *
+         * @param binding of type ViewDataBinding which is an
+         * abstract Base Class for generated binding classes
+         */
         public ViewHolder(ViewDataBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
