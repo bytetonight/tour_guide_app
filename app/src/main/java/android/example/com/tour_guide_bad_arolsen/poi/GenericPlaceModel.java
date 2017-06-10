@@ -190,4 +190,9 @@ public class GenericPlaceModel implements PointOfInterest, Parcelable {
         dest.writeString(detailText);
         dest.writeInt(previewImgResourceId);
     }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }
