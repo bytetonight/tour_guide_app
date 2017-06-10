@@ -12,7 +12,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -84,8 +83,9 @@ public class MainActivity extends AppCompatActivity {
                 case 3:
                     return GenericFragment.newInstance(
                             new ArrayList<>(VirtualDataBase2.getSportsPlaces(MainActivity.this)));
-                default: return GenericFragment.newInstance(
-                        new ArrayList<>(VirtualDataBase2.getHistoricalPlaces(MainActivity.this)));
+                default:
+                    return GenericFragment.newInstance(
+                            new ArrayList<>(VirtualDataBase2.getHistoricalPlaces(MainActivity.this)));
             }
 
         }

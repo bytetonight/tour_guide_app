@@ -10,33 +10,31 @@ import android.example.com.tour_guide_bad_arolsen.poi.interfaces.PointOfInterest
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
 import java.util.List;
 
 /**
  * Created by ByteTonight on 02.06.2017.
- *
- *
- * TODO : READ https://www.bignerdranch.com/blog/descent-into-databinding/
- *
+ * Interesting reads
+ * <p>
+ * https://www.bignerdranch.com/blog/descent-into-databinding/
  * https://stackoverflow.com/questions/38818199/android-databindingutils-how-to-use-a-single-adapter-for-the-whole-project
  */
 
 
-
-
-public class GenericPoiAdapter extends RecyclerView.Adapter<GenericPoiAdapter.ViewHolder>{
+public class GenericPoiAdapter extends RecyclerView.Adapter<GenericPoiAdapter.ViewHolder> {
 
     private List<PointOfInterest> items;
 
 
     public GenericPoiAdapter(List<PointOfInterest> items) {
         this.items = items;
-      }
+    }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
 
-        // this was ViewDataBinding binding but you can't assign handlers
+        // was using ViewDataBinding binding but you can't assign handlers to the base
         PoiListItemBinding binding = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
                 R.layout.poi_list_item, parent, false);
         binding.setHandlers(new PoiHandlers()); //use my handlers class
@@ -56,14 +54,12 @@ public class GenericPoiAdapter extends RecyclerView.Adapter<GenericPoiAdapter.Vi
     }
 
 
-
     public class ViewHolder extends RecyclerView.ViewHolder {
         private ViewDataBinding binding;
 
         /**
-         *
          * @param binding of type ViewDataBinding which is an
-         * abstract Base Class for generated binding classes
+         *                abstract Base Class for generated binding classes
          */
         public ViewHolder(ViewDataBinding binding) {
             super(binding.getRoot());
@@ -73,7 +69,6 @@ public class GenericPoiAdapter extends RecyclerView.Adapter<GenericPoiAdapter.Vi
         public void bind(Object obj) {
             binding.setVariable(BR.poi, obj);
             binding.executePendingBindings();
-
         }
     }
 

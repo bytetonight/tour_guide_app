@@ -2,9 +2,7 @@ package android.example.com.tour_guide_bad_arolsen.data;
 
 import android.content.Context;
 import android.example.com.tour_guide_bad_arolsen.R;
-
 import android.example.com.tour_guide_bad_arolsen.poi.GenericPlaceModel;
-
 import android.example.com.tour_guide_bad_arolsen.poi.interfaces.PointOfInterest;
 
 import java.util.ArrayList;
@@ -17,14 +15,7 @@ import java.util.List;
 
 public class VirtualDataBase2 {
 
-    public enum Poi {
-        Historical, Gastronomy, Recreational, Sports
-    }
-
-    private static Poi poiType;
-
-    public static List<PointOfInterest> getHistoricalPlaces(Context c)
-    {
+    public static List<PointOfInterest> getHistoricalPlaces(Context c) {
         List<PointOfInterest> places = new ArrayList<>();
         places.add(new GenericPlaceModel(
                 c.getString(R.string.historical_place_name_1),
@@ -48,8 +39,7 @@ public class VirtualDataBase2 {
         return places;
     }
 
-    public static List<PointOfInterest> getGastronomyPlaces(Context c)
-    {
+    public static List<PointOfInterest> getGastronomyPlaces(Context c) {
         List<PointOfInterest> places = new ArrayList<>();
         places.add(new GenericPlaceModel(
                 c.getString(R.string.gastronomy_place_name_1),
@@ -78,8 +68,7 @@ public class VirtualDataBase2 {
         return places;
     }
 
-    public static List<PointOfInterest> getRecreationPlaces(Context c)
-    {
+    public static List<PointOfInterest> getRecreationPlaces(Context c) {
         List<PointOfInterest> places = new ArrayList<>();
         places.add(new GenericPlaceModel(
                 c.getString(R.string.recreation_place_name_1),
@@ -96,8 +85,7 @@ public class VirtualDataBase2 {
         return places;
     }
 
-    public static List<PointOfInterest> getSportsPlaces(Context c)
-    {
+    public static List<PointOfInterest> getSportsPlaces(Context c) {
         List<PointOfInterest> places = new ArrayList<>();
         places.add(new GenericPlaceModel(
                 c.getString(R.string.sports_place_name_1),

@@ -16,24 +16,22 @@ import android.view.View;
 import android.widget.Toast;
 
 
-
 public class DetailsActivity extends AppCompatActivity {
 
     private PointOfInterest poi;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
 
         Intent senderIntent = getIntent();
-        if (senderIntent != null && senderIntent.hasExtra(Utils.ARG_POI))
-        {
+        if (senderIntent != null && senderIntent.hasExtra(Utils.ARG_POI)) {
             poi = senderIntent.getParcelableExtra(Utils.ARG_POI);
 
         }
 
-        if (savedInstanceState != null)
-        {
+        if (savedInstanceState != null) {
             poi = savedInstanceState.getParcelable(Utils.ARG_POI);
         }
 
@@ -42,7 +40,7 @@ public class DetailsActivity extends AppCompatActivity {
 
         setTitle(poi.getName());
 
-        //setContentView(R.layout.activity_details);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -57,7 +55,6 @@ public class DetailsActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        //Toast.makeText(this, poi.getDetailText(), Toast.LENGTH_SHORT).show();
     }
 
 

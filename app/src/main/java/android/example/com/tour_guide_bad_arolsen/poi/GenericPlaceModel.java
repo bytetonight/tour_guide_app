@@ -108,16 +108,17 @@ public class GenericPlaceModel implements PointOfInterest, Parcelable {
         return previewImgResourceId != NO_RESOURCE;
     }
 
-    /**
-     * https://stackoverflow.com/a/35809319
-     * https://mutualmobile.com/posts/using-data-binding-api-in-recyclerview
-     * http://www.vogella.com/tutorials/AndroidDatabinding/article.html#exercise-using-data-binding-for-recyclerview
-     */
 
     @Override
     public int getPreviewImageResourceId() {
         return previewImgResourceId;
     }
+
+    /**
+     * https://stackoverflow.com/a/35809319
+     * https://mutualmobile.com/posts/using-data-binding-api-in-recyclerview
+     * http://www.vogella.com/tutorials/AndroidDatabinding/article.html#exercise-using-data-binding-for-recyclerview
+     */
 
     /**
      * How this works ?

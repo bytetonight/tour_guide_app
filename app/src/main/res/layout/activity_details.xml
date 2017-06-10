@@ -42,7 +42,10 @@
             </android.support.design.widget.CollapsingToolbarLayout>
         </android.support.design.widget.AppBarLayout>
 
-
+        <!--
+        I am including a Layout here and in order to use my poi Object in that Layout,
+        I have to pass the poi Object to the Layout with bind:poi="@{poi}"
+        -->
         <include
             bind:poi="@{poi}"
             layout="@layout/content_details" />
