@@ -12,7 +12,8 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTop"> <!-- this makes sure parent is not reset after going to child -->
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

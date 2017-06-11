@@ -1,6 +1,6 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="android.example.com.tour_guide_bad_arolsen.fragments.HistoricalFragment"
+    tools:context="android.example.com.tour_guide_bad_arolsen.fragments.GenericFragment"
     style="@style/fragment_outer_frame">
 
     <!-- A RecyclerView with some commonly used attributes -->
