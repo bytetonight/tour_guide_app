@@ -90,6 +90,7 @@
 
     <style name="list_item_action_text_blue" parent="list_item_action_text">
         <item name="android:textColor">@color/list_item_action_text_color</item>
+        <item name="android:layout_weight">1</item>
     </style>
 
     <style name="details_coordinatator_layout">
